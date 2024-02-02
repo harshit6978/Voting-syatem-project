@@ -38,12 +38,12 @@ function Navbar({ data }) {
                 </div>
             </nav>
 
-            <nav class="navbar-primary">
-                <ul class="navbar-primary-menu">
+            <nav className="navbar-primary">
+                <ul className="navbar-primary-menu">
                     {data?.map((val) => {
                         return (
                             <li>
-                                <Link to={`${val.path}`} class="glyphicon glyphicon-list-alt nav-label">{val.name}</Link>
+                                <Link to={`${val.path}`} className="glyphicon glyphicon-list-alt nav-label">{val.name}</Link>
                             </li>
                         )
                     })}

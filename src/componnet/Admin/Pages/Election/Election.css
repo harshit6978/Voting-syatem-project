@@ -1,14 +1,4 @@
-.box {
-    width: 400px;
-    height: 400px;
-    background-color: rgb(165, 167, 167);
-    justify-content: center;
-    margin: auto;
-    margin-top: 100px;
-    border-radius: 10px;
-    padding: 10px;
 
-}
 
 .election {
     font-size: 25px;
@@ -46,13 +36,15 @@
     margin-left: 50px;
     cursor: pointer;
 }
-.Addd{
+
+.Addd {
     width: 100px;
     height: 40px;
     border-radius: 10px;
     cursor: pointer;
 }
-.Data{
+
+.Data {
     width: 100px;
     margin-left: 50px;
     margin-top: 50px;
@@ -60,12 +52,61 @@
     height: 40px;
     border-radius: 50px;
     font-size: 18px;
+    margin-bottom: 50px;
+    /* position: relative; */
 }
-.Data:hover{
+
+.Data:hover {
     background-color: brown;
     color: white;
 }
 
+.box1 {
+    width: 360px;
+    height: 200px;
+    background-color: rgba(244, 247, 246, 0.74);
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin: auto;
+    padding: 20px;
+    margin-bottom: 50px;
+    border: 2px solid black;
+}
 
+.box1:hover{
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
+.box {
+    width: 400px;
+    height: 400px;
+    background-color: rgb(165, 167, 167);
+    justify-content: center;
+    margin: auto;
+    /* margin-top: 50px; */
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    /* position: absolute; */
 
+}
+.dflex {
+    display: flex;
+    flex-flow: row wrap;
+}
 
+.val {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 500;
+    display:block;
+}
+
+.val2 {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+}

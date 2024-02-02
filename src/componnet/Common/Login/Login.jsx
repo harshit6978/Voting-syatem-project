@@ -42,7 +42,7 @@ function Login() {
         }
         // console.log(data);
 
-        axios.post("https://voater-backend-app.onrender.com/v1/auth", data).then((res) => {
+        axios.post("https://voater-backend-app.onrender.com/v1/login", data).then((res) => {
             // if(res.status===200){
             const _id = res.data.data._id;
             const role = res.data.data.Role;
