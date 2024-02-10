@@ -8,6 +8,7 @@ import Cookies from 'js-cookie';
 import Party from './componnet/Admin/Pages/Party/Party.jsx';
 import Dashboard from './componnet/Admin/Pages/Dashboard/Dashboard.jsx';
 import Election from './componnet/Admin/Pages/Election/Election.jsx';
+import PageConnection from './componnet/Admin/Pages/Connection/pageConnection.jsx';
 // import Cookies from "js-cookie";
 
 
@@ -24,7 +25,7 @@ function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/Election" element={<Election />} />
           <Route path="/party" element={<Party />} />
-          <Route path="/Student" element={""} />
+          <Route path="/Connection" element={<PageConnection />} />
           <Route path="*" element={""} />
         </Routes>
       </>

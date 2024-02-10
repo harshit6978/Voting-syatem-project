@@ -3,7 +3,7 @@ import { PARTY_DELETE_ERROR, PARTY_DELETE_PROGRESS, PARTY_DELETE_SUCCESS, PARTY_
 
 const initialState = {
     election: [],
-    isLoding: false,
+    isLoading: false,
     isError: null,
 };
 

@@ -56,7 +56,7 @@ const Party = () => {
       <div className='color'>
         {isSignUp && (
           <div className='manage'>
-            <div className='box'>
+            <div className='boxParty'>
               <div className='election'>create Election</div>
               <div className='lable'>Election Name</div>
               <input type='text' name='PartyName' className='name' value={update.pName} placeholder='Enter an Election Name' ref={pName} onChange={HandleChange} />

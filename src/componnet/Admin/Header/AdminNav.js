@@ -12,7 +12,7 @@ export const AdminNav = [
       path:"/Party",
     },
     {
-      name:"Student",
-      path:"/Student",
+      name:"Connection",
+      path:"/Connection",
     }
   ];

@@ -49,7 +49,7 @@ function Login() {
             const Name = res.data.data.Name;
             const Profile = res.data.data.Profile;
             // console.log(_id,role,name);
-            Cookies.set("role", role);
+            Cookies.set("role", role);  
             Cookies.set("name", Name);
             Cookies.set("profile", Profile);
             Cookies.set("_id", _id);

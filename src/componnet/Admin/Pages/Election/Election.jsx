@@ -67,53 +67,72 @@ const Election = () => {
             </button>
 
             <div className='color'>
-            <div className='hover'>
-                {isSignUp && (
-                    <div className='box'>
-                        <div className='election'>create Election</div>
-                        <div className='lable'>Election Name</div>
-                        <input
-                            type='text'
-                            name='ElectionName'
-                            className='name'
-                            placeholder='Enter an Election Name'
-                            value={update.ElectionName}
-                            ref={Ename}
-                            onChange={HandleChange}
-                        />
-                        <div className='lable'>Election Date</div>
-                        <input
-                            type='date'
-                            name='RegisterDate'
-                            className='name'
-                            placeholder='Enter an Election Date'
-                            value={update.RegisterDate ? update.RegisterDate.split('T')[0] : ''}
-                            ref={Date}
-                            onChange={HandleChange}
-                        />
-                        <br />
-                        <button className='Add' onClick={dataAdd}>
-                            Add
-                        </button>
-                        <button className='Addd' onClick={handleButtonUpdate}>
-                            Update
-                        </button>
-                    </div>
-                )}
+                <div className='hover'>
+                    {isSignUp && (
+                        <div className='box'>
+                            <div className='election'>create Election</div>
+                            <div className='lable'>Election Name</div>
+                            <input
+                                type='text'
+                                name='ElectionName'
+                                className='name'
+                                placeholder='Enter an Election Name'
+                                value={update.ElectionName}
+                                ref={Ename}
+                                onChange={HandleChange}
+                            />
+                            <div className='lable'>Election Date</div>
+                            <input
+                                type='date'
+                                name='RegisterDate'
+                                className='name'
+                                placeholder='Enter an Election Date'
+                                value={update.RegisterDate ? update.RegisterDate.split('T')[0] : ''}
+                                ref={Date}
+                                onChange={HandleChange}
+                            />
+                            <br />
+                            <button className='Add' onClick={dataAdd}>
+                                Add
+                            </button>
+                            <button className='Addd' onClick={handleButtonUpdate}>
+                                Update
+                            </button>
+                        </div>
+                    )}
                 </div>
             </div>
 
 
-            <div className='dflex'>
-                {vote.election?.map((val) => (
-                    <div key={val.id} className='box1'>
-                        <div className='val'>{val.ElectionName}</div>
-                        <div className='val'>{val.RegisterDate}</div>
-                        <button onClick={() => DeleteData(val)}>Delete</button>
-                        <button onClick={() => ViewData(val)}>View</button>
-                    </div>
-                ))}
-            </div>
+            <table id="keywords" cellspacing="0" cellpadding="0">
+                <thead>
+                    <tr>
+                        <th><span>Party Name</span></th>
+                        <th><span>Short Code</span></th>
+                        <th><span>Button</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {
+                        vote.election.map((val) => {
+                            return (
+                                <>
+                                    <tr>
+                                        <td class="card-title" > {val.ElectionName}</td>
+                                        <td class="card-text">{val.RegisterDate}</td>
+                                        <td>
+                                            <button onClick={() => DeleteData(val)}>Delete</button>
+                                            <button onClick={() => ViewData(val)}>View</button>
+                                        </td>
+                                    </tr>
+                                </>
+                            )
+                        })
+                    }
+
+                </tbody>
+            </table>
         </>
     );
 };

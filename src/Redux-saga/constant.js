@@ -11,3 +11,12 @@ export const PARTY_POST = "/party";
 export const PARTY_DELETE = "/pdel/";
 export const PARTY_UPDATE = "/pup/:_Id";
 
+export const USER_GET = "/authlist"
+export const USER_POST = "/auth"
+export const USER_DELETE = "/authdel/"
+export const USER_UPDATE = "/authup"
+
+
+export const CONNECT_GET="/plistall";
+export const CONNECT_POST="/plist";
+export const CONNECT_DELETE="/plistdel/";
