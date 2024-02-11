@@ -36,13 +36,9 @@ const PageConnection = () => {
                 Election: Data.election,
                 Party: Data.party,
             };
-
-            console.log(partyconnect);
+            // console.log(partyconnect);
             dispatch({ type: POST_CONNECT_PROGRESS, payload: partyconnect });
-            setData((prevData) => ({
-                ...prevData,
-                party: "",
-            }));
+            setData((prevData) => ({ ...prevData, party: "", election: "" }));
 
             Swal.fire({
                 title: "Connected!",
@@ -60,7 +56,7 @@ const PageConnection = () => {
 
     const handleDelete = (val) => {
         dispatch({ type: DELETE_CONNECT_PROGRESS, payload: val })
-        console.log(val,"vvvvvvvvvvvvvvvv");
+        console.log(val, "vvvvvvvvvvvvvvvv");
     }
 
 

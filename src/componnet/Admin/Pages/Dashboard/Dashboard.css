@@ -20,3 +20,68 @@ select{
     height: 40px;
     margin-bottom: 20px;
 }
+
+
+
+
+
+
+
+
+
+
+.ms-2{
+    margin: auto;
+    display: inline-block;
+    color: black;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+/* .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+} */
+
+.modal-content {
+    background-color: aliceblue;
+}
+
+/* .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+} */
+
+/* .vote {
+    margin: 30px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.5s;
+} */
+
+/* .vote:hover {
+    background-color: var(--secondary);
+    color: var(--black);
+    transform: scale(1.1);
+} */
+
+.modal-dialog .modal-content .modal-body .fild{
+        border: none;
+            border-bottom: 2px solid black;
+            background-color: transparent;
+            box-shadow: 0px 4px 20px -13px var(--black);
+            padding: 8px;
+}

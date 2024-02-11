@@ -57,12 +57,12 @@ const Party = () => {
         {isSignUp && (
           <div className='manage'>
             <div className='boxParty'>
-              <div className='election'>create Election</div>
-              <div className='lable'>Election Name</div>
+              <div className='election'>create Party</div>
+              <div className='lable'>Party Name</div>
               <input type='text' name='PartyName' className='name' value={update.pName} placeholder='Enter an Election Name' ref={pName} onChange={HandleChange} />
-              <div className='lable'>Election Date</div>
+              <div className='lable'>Party Date</div>
               <input type='file' name='Profile' className='name' placeholder='Enter an Election Date' ref={Profile} onChange={HandleChange} />
-              <input type='text' name='Shortcode' className='name' value={update.shortCode} placeholder='Enter an Election Date' ref={shortCode} onChange={HandleChange} />
+              <input type='text' name='Shortcode' className='name' value={update.shortCode} placeholder='Enter an Short code' ref={shortCode} onChange={HandleChange} />
               <br />
               <button className='Add' onClick={addData}>
                 Add
