@@ -19,7 +19,7 @@ export async function get_user_api() {
 
 export async function post_user_api(action) {
     return axios.post(BASE_URL + USER_POST, action.payload).then((res) => {
-        console.log(res,"user");
+        // console.log(res,"user");
         const data = res.data;
         const status = res.status;
         return {

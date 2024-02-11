@@ -122,8 +122,8 @@ const Election = () => {
                                         <td class="card-title" > {val.ElectionName}</td>
                                         <td class="card-text">{val.RegisterDate}</td>
                                         <td>
-                                            <button onClick={() => DeleteData(val)}>Delete</button>
-                                            <button onClick={() => ViewData(val)}>View</button>
+                                            <button onClick={() => DeleteData(val)} className='delete'>Delete</button>
+                                            <button onClick={() => ViewData(val)} className='view'>View</button>
                                         </td>
                                     </tr>
                                 </>

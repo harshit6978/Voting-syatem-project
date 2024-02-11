@@ -19,9 +19,9 @@ const PageConnection = () => {
     const Election = useSelector((state) => state.Ereducer);
     const Connect = useSelector((state) => state.CReducer);
 
-    console.log(Connect, "c");
-    console.log(Party, "p");
-    console.log(Election, "e");
+    // console.log(Connect, "c");
+    // console.log(Party, "p");
+    // console.log(Election, "e");
     // console.log(Election
 
     useEffect(() => {
@@ -56,7 +56,7 @@ const PageConnection = () => {
 
     const handleDelete = (val) => {
         dispatch({ type: DELETE_CONNECT_PROGRESS, payload: val })
-        console.log(val, "vvvvvvvvvvvvvvvv");
+        // console.log(val, "vvvvvvvvvvvvvvvv");
     }
 
 
@@ -121,7 +121,7 @@ const PageConnection = () => {
                                     <td className="card-title">{val.Party && val.Party.shortCode}</td>
                                     <td>
                                         {/* <button onClick={() => handleView(val)}>View</button> */}
-                                        <button onClick={() => handleDelete(val)}>Delete</button>
+                                        <button onClick={() => handleDelete(val)} className='delete'>Delete</button>
                                     </td>
                                 </tr>
                             )

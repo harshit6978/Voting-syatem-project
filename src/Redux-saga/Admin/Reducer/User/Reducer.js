@@ -8,7 +8,7 @@ const initialState = {
 }
 
 const userReducer = (state = { ...initialState }, action) => {
-    console.log(action, 'action from reducer');
+    // console.log(action, 'action from reducer');
 
     switch (action.type) {
         case USER_GET_PROGRESS: {

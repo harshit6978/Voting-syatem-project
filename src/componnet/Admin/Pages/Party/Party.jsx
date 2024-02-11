@@ -103,8 +103,8 @@ const Party = () => {
                       </div>
                     </div>
                     <td>
-                      <button onClick={() => DeleteParty(val)}>Delete</button>
-                      <button onClick={() => UpdateParty(val)}>View</button>
+                      <button onClick={() => DeleteParty(val)} className='delete'>Delete</button>
+                      <button onClick={() => UpdateParty(val)} className='view'>View</button>
                     </td>
                   </tr>
                 </>

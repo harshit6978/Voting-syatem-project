@@ -9,7 +9,7 @@ const initialState = {
 };
 
 const Ereducer = (state = initialState, action) => {
-    console.log(action);
+    // console.log(action);
 
     switch (action.type) {
         case ELECTION_GET_PROGRESS: {

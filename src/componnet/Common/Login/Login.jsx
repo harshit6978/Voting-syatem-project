@@ -30,7 +30,7 @@ function Login() {
             Cookies.set("_id", _id);
             window.location = "/";
             // }
-            console.log(res, "dfdf");
+            // console.log(res, "dfdf");
         })
     }
 
@@ -55,7 +55,7 @@ function Login() {
             Cookies.set("_id", _id);
             window.location = "/";
             // }
-            console.log(res, "dfdf");
+            // console.log(res, "dfdf");
         })
     }
 

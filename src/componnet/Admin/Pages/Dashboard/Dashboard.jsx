@@ -41,7 +41,7 @@ function Dashboard() {
 
     const handleDelete = (val) => {
         dispatch({ type: USER_DELETE_PROGRESS, payload: val })
-        console.log(val);
+        // console.log(val);
     }
 
     return (
@@ -118,8 +118,8 @@ function Dashboard() {
                                         <td class="card-title" > {val.Role}</td>
                                         <td class="card-title" > {val.Phone}</td>
                                         <td>
-                                            <button onClick={() => handleDelete(val)}>Delete</button>
-                                            <button onClick={""}>View</button>
+                                            <button onClick={() => handleDelete(val)} className='delete'>Delete</button>
+                                            <button onClick={""} className='view'>View</button>
                                         </td>
                                     </tr>
                                 </>
