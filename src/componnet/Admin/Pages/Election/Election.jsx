@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import './Election.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { ELECTION_DELETE_PROGRESS, ELECTION_GET_PROGRESS, ELECTION_POST_PROGRESS, ELECTION_UPDATE_PROGRESS } from '../../../../Redux-saga/Admin/Action/Election/Action';
+import Swal from 'sweetalert2';
 
 const Election = () => {
     const [isSignUp, setIsSignUp] = useState(false);
@@ -34,12 +35,37 @@ const Election = () => {
             ElectionName: Ename.current.value,
             RegisterDate: Date.current.value,
         };
+
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Your Data has been Added",
+            showConfirmButton: false,
+            timer: 1500
+        });
         dispatch({ type: ELECTION_POST_PROGRESS, payload: election });
     };
 
     const DeleteData = (val) => {
         console.log(val);
-        dispatch({ type: ELECTION_DELETE_PROGRESS, payload: val });
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                dispatch({ type: ELECTION_DELETE_PROGRESS, payload: val });
+                Swal.fire({
+                    title: "Deleted!",
+                    text: "Your Data has been deleted.",
+                    icon: "success"
+                });
+            }
+        });
     };
 
     const ViewData = (val) => {

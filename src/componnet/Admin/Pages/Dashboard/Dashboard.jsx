@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import './Dashboard.css';
 import { USER_DELETE_PROGRESS, USER_GET_PROGRESS, USER_POST_PROGRESS } from '../../../../Redux-saga/Admin/Action/User/Action';
 import { useDispatch, useSelector } from 'react-redux';
+import Swal from 'sweetalert2';
 
 
 function Dashboard() {
@@ -36,6 +37,13 @@ function Dashboard() {
             Email: email.current.value,
             Profile: profile.current.files[0],
         }
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Your Data has been Added",
+            showConfirmButton: false,
+            timer: 1500
+        });
         dispatch({ type: USER_POST_PROGRESS, payload: formdata })   
     }
 

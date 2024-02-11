@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import "./Party.css"
 import { useDispatch, useSelector } from 'react-redux';
 import { PARTY_DELETE_PROGRESS, PARTY_GET_PROGRESS, PARTY_POST_PROGRESS } from '../../../../Redux-saga/Admin/Action/Party/Action';
+import Swal from 'sweetalert2';
 const Party = () => {
 
   const [isSignUp, setIsSignUp] = useState(false);
@@ -30,12 +31,35 @@ const Party = () => {
       Profile: URL.createObjectURL(Profile.current.files[0]),
       shortCode: shortCode.current.value
     }
-    console.log(datee);
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Your Data has been Added",
+      showConfirmButton: false,
+      timer: 1500
+    });
     dispatch({ type: PARTY_POST_PROGRESS, payload: datee });
   }
 
   const DeleteParty = (val) => {
-    dispatch({ type: PARTY_DELETE_PROGRESS, payload: val })
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        dispatch({ type: PARTY_DELETE_PROGRESS, payload: val })
+        Swal.fire({
+          title: "Deleted!",
+          text: "Your Data has been deleted.",
+          icon: "success"
+        });
+      }
+    });
   }
 
   const UpdateParty = (val) => {
