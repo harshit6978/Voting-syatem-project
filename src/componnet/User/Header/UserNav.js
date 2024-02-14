@@ -4,7 +4,7 @@ export const UserNav = [
       path: "/",
     },
     {
-      name: "about",
-      path: "/about",
+      name: "vote",
+      path: "/vote",
     }
   ];

@@ -10,7 +10,7 @@ import Dashboard from './componnet/Admin/Pages/Dashboard/Dashboard.jsx';
 import Election from './componnet/Admin/Pages/Election/Election.jsx';
 import PageConnection from './componnet/Admin/Pages/Connection/pageConnection.jsx';
 // import Cookies from "js-cookie";
-
+import Vote from "./componnet/User/Pages/Vote.jsx"
 
 
 function App() {
@@ -36,9 +36,7 @@ function App() {
         <Navbar data={UserNav} />
         <Routes>
           <Route path="/" element={""} />
-          <Route path="/FacultyCo" element={""} />
-          <Route path="/Faculty" element={""} />
-          <Route path="/Student" element={""} />
+          <Route path="/vote" element={<Vote/>} />
           <Route path="*" element={""} />
         </Routes>
       </>

@@ -35,7 +35,7 @@ function Dashboard() {
             CardNumber: CardNumber.current.value,
             Phone: phone.current.value,
             Email: email.current.value,
-            Profile: profile.current.files[0],
+            Profile: URL.createObjectURL(profile.current.files[0]),
         }
         Swal.fire({
             position: "top-end",
